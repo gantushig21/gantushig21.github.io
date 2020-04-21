@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, "Arial Black", Verdana, Georgia, Tahoma, "Courier New", "Times New Roman";
+    font-size: 0.95em;
+    background-color: rgb(241, 232, 221);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: darkblue;
+}
+
+p em {
+    color: blueviolet;
+}
+
+p::first-letter {
+    font-size: 1.5em;
+}
+
+a:link {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: green;
+}
+
+a:active {
+    color: blue;
+}
+
+ol {
+    transform: rotate(180deg);
+    padding-right: 40px;
+    padding-left: 0px;
+}
+
+ol > li {
+    transform: rotate(-180deg);
+}
+
+li dl {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+li dl dt, dd {
+    font-size: 0.9em;
+}
+
+li dl dt {
+    font-weight: bold;
+    color: orangered;
+}
+
+.row {
+    display: flex;
+}
+
+.image {
+    width: 25%;
+    max-width: 300px;
+    text-align: center;
+    margin: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.image > img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.image p {
+    font-family: Verdana,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+}
