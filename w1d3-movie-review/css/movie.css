@@ -1,0 +1,118 @@
+body {
+    background-image: url("../images/background.png");
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.image-header {
+    background-image: url("../images/bannerbg.png"); 
+    background-repeat: repeat-x;
+    text-align: center;   
+}
+
+h1 {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-shadow: 3px 3px #999999;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    border: 4px gray solid;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.content {
+    overflow: hidden;
+}
+
+.left-section {
+    width: 550px;
+    float: left;
+}
+
+.rotten {
+    background-image: url("../images/rbg.png");
+    font-size: 48pt;
+    height: 83px;
+    color: red;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    float: left;
+    width: 47%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.comment {
+    padding: 0 8px;
+    font-size: 8pt;
+    font-weight: bold;
+    background-color: #E8DC9B;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.comment img {
+    float: left; 
+    margin-right: 5px;
+}
+
+.user {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.user img {
+    float: left;
+    margin-right: 5px;
+}
+
+.right-section {
+    float: right;
+    width: 250px;
+    background-color: #A2B964;
+    font-size: 8pt;
+    font-family: Arial, sans-serif;
+}
+
+.right-section dl {
+    margin: 10pt;
+}
+
+.right-section dt {
+    font-weight: bold;
+    margin-top: 10pt;
+}
+
+.right-section ul {
+    padding: 0;
+}
+
+.right-section ul li {
+    list-style: none;
+}
+
+.pagination {
+    text-align: center;
+    background-color: #A2B964;
+    padding: 5px;
+    clear: both;
+}
+
+.validation {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+}
