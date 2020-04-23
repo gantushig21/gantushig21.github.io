@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <link rel="stylesheet" href="css/form1.css">
+    <title>W1D4 - Form 1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <form>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input class="form-control" type="email" name="email" id="email" placeholder="Enter email"/>    
+                    <span>We'll never share your email with anyone else</span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        class="form-control" 
+                        type="password" 
+                        name="password" 
+                        id="password" 
+                        placeholder="Password"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$"
+                        title="At least one number and one uppercase and one lowercase"
+                        required
+                    />    
+                </div>
+                <div class="form-group">
+                    <label for="url">Web Url</label>
+                    <input 
+                        class="form-control" 
+                        type="text" 
+                        name="url" 
+                        id="url" 
+                        placeholder="Web url"
+                        title="http or https"
+                        pattern="https?://.+"
+                    />    
+                </div>
+                <div class="checkbox">
+                    <label for="checkmeout">
+                        <input type="checkbox" name="checkmeout" id="checkmeout">
+                        Check me out
+                    </label>
+                </div>
+                <input type="submit" value="Submit">
+            </form>        
+        </div>
+    </div>
+</body>
+</html>

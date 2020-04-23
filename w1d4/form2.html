@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <link rel="stylesheet" href="css/form2.css">
+    <title>W1D4 - Form 2</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li>
+                <a class="active" href="#">MUM Golden Dome Market:::SRM System</a>
+            </li>
+            <li>
+                <a href="#">Products</a>
+            </li>
+            <li>
+                <a href="#">Suppliers</a>
+            </li>
+        </ul>
+        <ul class="user">
+            <li>Hello!</li>
+            <li>
+                <button class="btn btn-sign-out">Sign Out</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>New Product Form</h1>
+        <div class="form">
+            <form class="form-container">
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="productNumber">Product Number</label>
+                        <input 
+                            class="form-control" 
+                            type="text" 
+                            name="productNumber" 
+                            id="productNumber" 
+                        />    
+                    </div>    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input 
+                            class="form-control" 
+                            type="text" 
+                            name="name" 
+                            id="name" 
+                        />    
+                    </div>
+                    <div class="form-group">
+                        <label for="unitPrice">Unit Price</label>
+                        <input 
+                            class="form-control" 
+                            type="text" 
+                            name="unitPrice" 
+                            id="naunitPrice" 
+                            pattern="\$[1-9]\d{2,}\.{2}"
+                            value="0.00"
+                        />    
+                    </div>    
+                </div>
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="productNumber">Quantity in stock</label>
+                        <input 
+                            class="form-control" 
+                            type="text" 
+                            name="productNumber" 
+                            id="productNumber" 
+                            value="0"
+                        />    
+                    </div>    
+                    <div class="form-group">
+                        <label for="supplier">Supplier</label>
+                        <select name="selectSupplier" id="selectSupplier" class="form-control">
+                            <option value="select">Select a supplier</option>
+                            <option value="supplier1">Supplier 1</option>
+                            <option value="supplier2">Supplier 2</option>
+                            <option value="supplier3">Supplier 3</option>
+                            <option value="supplier4">Supplier 4</option>
+                        </select>
+                    </div>    
+                    <div class="form-group">
+                        <label for="dateSupplied">Date Supplied</label>
+                        <input 
+                            class="form-control" 
+                            type="date" 
+                            name="dateSupplied" 
+                            id="dateSupplied" 
+                        />    
+                        <span>Enter a valid Date.</span>
+                    </div> 
+                    <div class="form-buttons">
+                        <button class="btn btn-reset">Reset</button>
+                        <button class="btn btn-cancel">Cancel</button>
+                        <button class="btn btn-add">Add Product</button>
+                    </div>
+                </div>
+            </form>   
+        </div>
+    </div>
+</body>
+</html>
