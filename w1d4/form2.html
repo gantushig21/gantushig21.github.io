@@ -34,15 +34,16 @@
     <div class="container">
         <h1>New Product Form</h1>
         <div class="form">
-            <form class="form-container">
+            <form class="form-container" id="form2">
                 <div class="form-column">
                     <div class="form-group">
                         <label for="productNumber">Product Number</label>
                         <input 
                             class="form-control" 
                             type="text" 
-                            name="productNumber" 
+                            name="Product Number" 
                             id="productNumber" 
+                            required
                         />    
                     </div>    
                     <div class="form-group">
@@ -50,8 +51,9 @@
                         <input 
                             class="form-control" 
                             type="text" 
-                            name="name" 
+                            name="Name" 
                             id="name" 
+                            required
                         />    
                     </div>
                     <div class="form-group">
@@ -59,28 +61,31 @@
                         <input 
                             class="form-control" 
                             type="text" 
-                            name="unitPrice" 
-                            id="naunitPrice" 
-                            pattern="\$[1-9]\d{2,}\.{2}"
-                            value="0.00"
+                            name="Unit Price" 
+                            id="unitPrice" 
+                            pattern="(\d+\.\d{1,2})"
+                            value="1.00"
+                            required
                         />    
                     </div>    
                 </div>
                 <div class="form-column">
                     <div class="form-group">
-                        <label for="productNumber">Quantity in stock</label>
+                        <label for="quantity">Quantity in stock</label>
                         <input 
                             class="form-control" 
                             type="text" 
-                            name="productNumber" 
-                            id="productNumber" 
-                            value="0"
+                            name="Quantity" 
+                            id="quantity" 
+                            pattern="[1-9]\d{0,}"
+                            value="1"
+                            required
                         />    
                     </div>    
                     <div class="form-group">
                         <label for="supplier">Supplier</label>
-                        <select name="selectSupplier" id="selectSupplier" class="form-control">
-                            <option value="select">Select a supplier</option>
+                        <select name="Supplier" id="supplier" class="form-control" required>
+                            <option value="s" selected disabled>Select a supplier</option>
                             <option value="supplier1">Supplier 1</option>
                             <option value="supplier2">Supplier 2</option>
                             <option value="supplier3">Supplier 3</option>
@@ -92,19 +97,75 @@
                         <input 
                             class="form-control" 
                             type="date" 
-                            name="dateSupplied" 
+                            name="Date Supplied" 
                             id="dateSupplied" 
+                            required
                         />    
                         <span>Enter a valid Date.</span>
                     </div> 
                     <div class="form-buttons">
-                        <button class="btn btn-reset">Reset</button>
-                        <button class="btn btn-cancel">Cancel</button>
-                        <button class="btn btn-add">Add Product</button>
+                        <button type="reset" class="btn btn-reset">Reset</button>
+                        <button type="button" class="btn btn-cancel">Cancel</button>
+                        <button type="submit" class="btn btn-add">Add Product</button>
                     </div>
                 </div>
             </form>   
         </div>
     </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-names">
+                    <p><strong>Product Name</strong></p>
+                    <p><strong>Name</strong></p>
+                    <p><strong>Unit Price</strong></p>
+                    <p><strong>Quantity</strong></p>
+                    <p><strong>Supplier</strong></p>
+                    <p><strong>Date Supplied</strong></p>        
+                </div>
+                <div class="modal-values">
+                    <p id="productNumberModal"></p>
+                    <p id="nameModal"></p>
+                    <p id="unitPriceModal"></p>
+                    <p id="quantityModal"></p>
+                    <p id="supplierModal"></p>
+                    <p id="dateSuppliedModal"></p>        
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const modal = document.getElementById("modal");
+        const closeModal = document.getElementById("closeModal");
+
+        closeModal.onclick = () => {
+            modal.style.display = "none";
+        }
+
+        window.onclick = e => {
+            if (e.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        const ids = ["productNumber", "name", "unitPrice", "quantity", "supplier", "dateSupplied"];
+
+        document.getElementById("form2").addEventListener('submit', e => {
+            e.preventDefault();
+
+            ids.forEach(id => {
+                const value = document.getElementById(id).value;
+                document.getElementById(id + "Modal").innerHTML = value;
+            });
+
+            modal.style.display = "block";
+
+
+            console.log(productNumber, name, unitPrice, quantity, supplier, dateSupplied);
+        });
+
+    </script>
 </body>
 </html>

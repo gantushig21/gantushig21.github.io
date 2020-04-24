@@ -10,10 +10,10 @@
 <body>
     <div class="container">
         <div class="form">
-            <form>
+            <form id="form1">
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input class="form-control" type="email" name="email" id="email" placeholder="Enter email"/>    
+                    <input class="form-control" type="email" name="email" id="email" placeholder="Enter email" required/>    
                     <span>We'll never share your email with anyone else</span>
                 </div>
                 <div class="form-group">
@@ -39,6 +39,7 @@
                         placeholder="Web url"
                         title="http or https"
                         pattern="https?://.+"
+                        required
                     />    
                 </div>
                 <div class="checkbox">
@@ -51,5 +52,15 @@
             </form>        
         </div>
     </div>
+    <script>
+        document.getElementById("form1").addEventListener('submit', e => {
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const url = document.getElementById("url").value;
+
+            console.log(email, password, url);
+        });
+    </script>
 </body>
 </html>
