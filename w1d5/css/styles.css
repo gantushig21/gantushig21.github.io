@@ -1,0 +1,29 @@
+body {
+    background-color: #000000;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.clock {
+    width: 100%;
+    padding: 15px;
+    color: #E8E8E8;
+    border: 2px solid #E8E8E8;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(175, 170, 170, 0.2),0 6px 20px 0 rgba(224, 212, 212, 0.19);
+    font-size: 60px;
+    text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+    .clock {
+        width: 500px;
+    }
+}
