@@ -1,3 +1,5 @@
+"use strict"
+
 var make_adder = function(value) {
     var counter = 0;
     return function() {

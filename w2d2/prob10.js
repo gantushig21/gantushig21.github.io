@@ -1,3 +1,5 @@
+"use strict"
+
 const employee = (function() {
     let name;
     let age;
