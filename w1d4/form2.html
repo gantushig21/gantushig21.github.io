@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="origin">
+    <!-- For w1d4 -->
+    <!-- <script src="./js/javascript.js"></script> -->
+
+    <!-- For w2d3 -->
+    <script src="./js/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/jquery.js"></script>
+
     <link rel="stylesheet" href="css/form2.css">
     <title>W1D4 - Form 2</title>
 </head>
@@ -112,6 +119,7 @@
             </form>   
         </div>
     </div>
+    <div class="result"></div>
 
     <div id="modal" class="modal">
         <div class="modal-content">
@@ -136,36 +144,6 @@
             </div>
         </div>
     </div>
-    <script>
-        const modal = document.getElementById("modal");
-        const closeModal = document.getElementById("closeModal");
-
-        closeModal.onclick = () => {
-            modal.style.display = "none";
-        }
-
-        window.onclick = e => {
-            if (e.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        const ids = ["productNumber", "name", "unitPrice", "quantity", "supplier", "dateSupplied"];
-
-        document.getElementById("form2").addEventListener('submit', e => {
-            e.preventDefault();
-
-            ids.forEach(id => {
-                const value = document.getElementById(id).value;
-                document.getElementById(id + "Modal").innerHTML = value;
-            });
-
-            modal.style.display = "block";
-
-
-            console.log(productNumber, name, unitPrice, quantity, supplier, dateSupplied);
-        });
-
-    </script>
+    
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="origin">
     <link rel="stylesheet" href="css/form1.css">
+    <script src="./js/jquery/3.4.1/jquery.min.js"></script>
     <title>W1D4 - Form 1</title>
 </head>
 <body>
@@ -53,14 +54,23 @@
         </div>
     </div>
     <script>
-        document.getElementById("form1").addEventListener('submit', e => {
-            e.preventDefault();
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            const url = document.getElementById("url").value;
+        $(document).ready(function(){
+            $("#form1").submit(e => {
+                e.preventDefault();
 
-            console.log(email, password, url);
+                console.log($("#email").val());
+                console.log($("#password").val());
+                console.log($("#url").val());
+            });
         });
+        // document.getElementById("form1").addEventListener('submit', e => {
+        //     e.preventDefault();
+        //     const email = document.getElementById("email").value;
+        //     const password = document.getElementById("password").value;
+        //     const url = document.getElementById("url").value;
+
+        //     console.log(email, password, url);
+        // });
     </script>
 </body>
 </html>

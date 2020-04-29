@@ -64,6 +64,10 @@ body {
     padding: 20px 100px;
 }
 
+.result {
+    padding: 20px 100px;
+}
+
 .container h1 {
     font-weight: normal;
 }
